@@ -1,0 +1,27 @@
+/*Set the game background image*/
+#background {
+	background-image: url("https://static.vix.com/es/sites/default/files/styles/large/public/a/avatar-portada.jpg?itok=p94bZzXT");
+	opacity: 0.5;
+	background-repeat: no-repeat;
+	background-color: #cccccc;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	font-size: 20px;
+}
+
+/*Background for flunked score screen:*/;
+#failing {
+
+
+}
+
+/*Background for passing score screen*/
+#mediocre {
+
+
+}
+
+/*Background for 100% score screen*/
+#aced {
+
+}
