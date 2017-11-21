@@ -70,29 +70,45 @@ $(document).ready(function triviaGame() {
 	$("#ans1").one("click",function answer1() { //run the function only once for "toggling"
 		if($("#ans1").is(':checked')) {
 			baseScore++;
+		} else if ($("#ans1").is(':unchecked')) { //subtract from score if toggled from correct to incorrect answer
+			baseScore--;
+		} else {
+			baseScore++; //add back to score if toggled from correct to incorrect to correct
 		}
 	});
 	//Second answer
 	$("#ans2").one("click",function answer2() { //run the function only once for "toggling" 
 		if($("#ans2").is(':checked')) {
 			baseScore++;
+		} else if ($("#ans2").is('unchekced')) { //subtract from score if toggled from correct to incorrect
+			baseScore--;
+		} else {
+			baseScore++; //add back to score if toggled from correct to incorrect to correct
 		}
 	});
 	//Third answer
 	$("#ans3").click("click",function answer3() { //run the function only once for "toggling"
 		if($("#ans3").is(':checked')) {
 			baseScore++;
+		} else if ($("#ans3").is('unchekced')) { //subtract from score if toggled from correct to incorrect
+			baseScore--;
+		} else {
+			baseScore++; //add back to score if toggled from correct to incorrect to correct
 		}
 	});
 	// Fourth answer
 	$("#ans4").click("click",function answer4() { //run the function only once for "toggling"
 		if($("#ans4").is(':checked')) {
 			baseScore++;
+		} else if ($("#ans4").is('unchekced')) { //subtract from score if toggled from correct to incorrect
+			baseScore--;
+		} else {
+			baseScore++; //add back to score if toggled from correct to incorrect to correct
 		}
 	});
 
 	//Timer function
-	var number = 60 //set our number to 60 for a minute
+	var number = 20 //set our number to 60 for a minute
 	var intervalId; //this variable will hold the interval for the countdown function
 	
 	function countdown() {
