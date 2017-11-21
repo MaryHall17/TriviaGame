@@ -67,36 +67,32 @@ $(document).ready(function triviaGame() {
 
 	//Find if the answers are clicked, if it they are clicked, add to the score
 	//First answer
-	$("#ans1").click(function answer1() {
+	$("#ans1").one("click",function answer1() { //run the function only once for "toggling"
 		if($("#ans1").is(':checked')) {
-			alert("It's checked!");
 			baseScore++;
 		}
 	});
 	//Second answer
-	$("#ans2").click(function answer2() {
+	$("#ans2").one("click",function answer2() { //run the function only once for "toggling" 
 		if($("#ans2").is(':checked')) {
-			alert("It's checked!")
 			baseScore++;
 		}
 	});
 	//Third answer
-	$("#ans3").click(function answer3() {
+	$("#ans3").click("click",function answer3() { //run the function only once for "toggling"
 		if($("#ans3").is(':checked')) {
-			alert("It's checked!")
 			baseScore++;
 		}
 	});
 	// Fourth answer
-	$("#ans4").click(function answer4() {
+	$("#ans4").click("click",function answer4() { //run the function only once for "toggling"
 		if($("#ans4").is(':checked')) {
-			alert("It's checked!")
 			baseScore++;
 		}
 	});
 
 	//Timer function
-	var number = 25 //set our number to 60 for a minute
+	var number = 60 //set our number to 60 for a minute
 	var intervalId; //this variable will hold the interval for the countdown function
 	
 	function countdown() {
@@ -114,7 +110,7 @@ $(document).ready(function triviaGame() {
 
 			//...run the stop function defined below
 			stop();
-			//call the baseScore... 
+			//call the baseScore to run scoring function... 
 			console.log(baseScore);
 			// Alert time is up
 			alert("Time Up!");
