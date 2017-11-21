@@ -31,19 +31,35 @@ $(document).ready(function assignValues() {
 	console.log(ans4);
 	//Timer function
 	var number = 60 //set our number to 60 for a minute
-	 //this variable will hold the interval for the countdown function
+	var intervalId; //this variable will hold the interval for the countdown function
 	
 	function countdown() {
-		setInterval(decrement, 1000); //decreases number by one every second
+	intervalId=setInterval(decrement, 1000); //decreases number by one every second
 	};
-	console.log(countdown());
+
 	//Function to decrement the timer
 	function decrement() {
 		number--; //decreases the number variable by one 
+		$("#timer").html("<h2>" + number + "<h2>"); //shows the timer as the number variable in the top div
+	
+	
+		//When time runs out...
+		if (number === 0) {
+
+			//...run the stop function defined below
+			stop();
+			//...run the scoring function
+			// Alert time is up
+			alert("Time Up!");
+		}
 	};
 
-	$("#timer").html("<h2>" + number + "<h2>"); //shows the timer as the number variable in the top div
+	//The stop function to clear the intervalId
+	function stop() {
+		clearInterval(intervalId);
+	}
 
+	console.log(countdown()); //executes the timer function; console logged to make sure it's working
 });
 
 
