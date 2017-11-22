@@ -66,6 +66,7 @@
 $(document).ready(function triviaGame() {
 
 	//Find if the answers are clicked, if it they are clicked, add to the score
+	//Run the functions once because of toggling
 	//First answer
 	$("#ans1").one("click",function answer1() { //run the function only once for "toggling"
 		if($("#ans1").is(':checked')) {
@@ -108,8 +109,9 @@ $(document).ready(function triviaGame() {
 	});
 
 	//Timer function
-	var number = 20 //set our number to 60 for a minute
-	var intervalId; //this variable will hold the interval for the countdown function
+
+	var number = 60 //set our number to 60 for a minute
+	var intervalId; //this variable will hold the interval to clear it after time is up
 	
 	function countdown() {
 	intervalId=setInterval(decrement, 1000); //decreases number by one every second
@@ -117,7 +119,7 @@ $(document).ready(function triviaGame() {
 
 	//Function to decrement the timer
 	function decrement() {
-		number--; //decreases the number variable by one 
+		number--; //decreases the number variable (time) by one 
 		$("#timer").html("<h2>" + number + "<h2>"); //shows the timer as the number variable in the top div
 	
 	
@@ -126,15 +128,22 @@ $(document).ready(function triviaGame() {
 
 			//...run the stop function defined below
 			stop();
-			//call the baseScore to run scoring function... 
+			//call the baseScore in the console to run scoring if/else logic...
 			console.log(baseScore);
 			// Alert time is up
-			alert("Time Up!");
+			alert("Time Up!"); 
+			//Scoring if/else logic
+			if(baseScore==4) {
+				alert("Score is " + baseScore + " " + "out of 4 " + "You aced it!");
+			} else if(baseScore==3) {
+				alert("Score is " + baseScore + " " + "out of 4 " +  "You're almost there!");
+			} else {
+				alert("Score is " + baseScore + " " + "out of 4 " +  "Season One Zuko has more honor than you!")
+			}
 		}
 	}; 
 
-
-	//The stop function to clear the intervalId
+	//The stop function to clear the intervalId, and thus stop decrementing at zero
 	function stop() {
 		clearInterval(intervalId);
 	}

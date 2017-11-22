@@ -14,7 +14,7 @@
 }
 /*Background for flunked score screen:*/;
 #failing {
-	background-image:
+	background-image: url("assets/images/banishmentzuko")
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
@@ -25,7 +25,7 @@
 
 /*Background for passing score screen*/
 #mediocre {
-	background-image:
+	background-image: url("assets/images/iroh.jpg")
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
@@ -35,7 +35,7 @@
 
 /*Background for 100% score screen*/
 #aced {
-	background-image:
+	background-image: url("assets/images/team_avatar.jpg")
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
