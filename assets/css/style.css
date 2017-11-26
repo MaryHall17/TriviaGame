@@ -1,5 +1,5 @@
 /*Set the game background image*/
-#background {
+.background {
 	background-image: url("https://static.vix.com/es/sites/default/files/styles/large/public/a/avatar-portada.jpg?itok=p94bZzXT");
 	background-repeat: no-repeat;
 	background-color: #cccccc;
@@ -12,20 +12,18 @@
 	color: white;
 	font-size: 20px;
 }
-/*Background for flunked score screen:*/;
-#failing {
-	background-image: url("assets/images/banishmentzuko")
+/*Background for flunked score screen:*/
+.failing {
+	background-image: url("https://vignette.wikia.nocookie.net/avatar/images/a/a8/Zuko_defeated.png/revision/latest?cb=20130822231443");
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
 	background-size: 100% 100%;
-
-
 }
 
 /*Background for passing score screen*/
-#mediocre {
-	background-image: url("assets/images/iroh.jpg")
+.mediocre {
+	background-image: url("https://cdn-images-1.medium.com/max/1600/1*CTWM-IhNeX4_kRSPxR3BpQ.jpeg");
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
@@ -34,8 +32,8 @@
 }
 
 /*Background for 100% score screen*/
-#aced {
-	background-image: url("assets/images/team_avatar.jpg")
+.aced {
+	background-image: url("https://vignette.wikia.nocookie.net/avatar/images/1/12/Foaming_mouth_guy.png/revision/latest?cb=20140215111856");
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-attachment: fixed;
